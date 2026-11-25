@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos - Cafeteria</title>
+</head>
+<body>
+
+    <h1>☕ Cafeteria</h1>
+    <h2>Área dos Funcionários</h2>
+
+    <hr>
+
+    <h2>Registrar novo pedido</h2>
+
+    <form id="formPedido">
+
+        <h3>Dados do cliente</h3>
+
+        <label for="cliente">Nome do cliente:</label>
+        <input type="text" id="cliente" required>
+
+        <br><br>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" placeholder="Rua, número e bairro" required>
+
+        <br><br>
+
+        <label for="bloco">Bloco:</label>
+        <input type="text" id="bloco" placeholder="Bloco ou apartamento">
+
+        <br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required>
+
+        <br><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+
+        <hr>
+
+        <h3>Produtos disponíveis</h3>
+
+        <div id="listaProdutos">
+            Carregando produtos...
+        </div>
+
+        <hr>
+
+        <h3>Observações do pedido</h3>
+
+        <textarea
+            id="observacoes"
+            placeholder="Exemplo: sem açúcar, entregar na portaria..."
+        ></textarea>
+
+        <br><br>
+
+        <button type="submit">Registrar pedido</button>
+
+    </form>
+
+    <p id="mensagem"></p>
+
+    <hr>
+
+    <h2>Pedidos cadastrados</h2>
+
+    <div id="listaPedidos">
+        Nenhum pedido cadastrado ainda.
+    </div>
+
+    <br>
+
+<button onclick="window.location.href='produtos.html'">
+    Gerenciar produtos
+</button>
+
+<button onclick="sair()">Sair do sistema</button>
+
+    <script src="pedidos.js"></script>
+
+</body>
+</html>

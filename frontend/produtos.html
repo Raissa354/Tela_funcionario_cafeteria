@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Produtos - Cafeteria</title>
+</head>
+<body>
+
+    <h1>☕ Gerenciamento de Produtos</h1>
+
+    <h2>Cadastrar novo produto</h2>
+
+    <form id="formProduto">
+        <label>Nome do produto:</label>
+        <input type="text" id="nome" required>
+
+        <br><br>
+
+        <label>Categoria:</label>
+        <input type="text" id="categoria" required>
+
+        <br><br>
+
+        <label>Preço:</label>
+        <input type="number" id="preco" min="0.01" step="0.01" required>
+
+        <br><br>
+
+        <button type="submit">Cadastrar produto</button>
+    </form>
+
+    <p id="mensagem"></p>
+
+    <hr>
+
+    <h2>Produtos cadastrados</h2>
+
+    <div id="listaProdutos"></div>
+
+    <br>
+
+    <button onclick="voltar()">Voltar aos pedidos</button>
+    <button onclick="sair()">Sair do sistema</button>
+
+    <script src="produtos.js"></script>
+
+</body>
+</html>
